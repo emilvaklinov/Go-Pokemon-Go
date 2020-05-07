@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Go_Pokemon_Go" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Go_Pokemon_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,15 +51,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="centerTapped" destination="MbC-qE-gs5" id="Cex-nX-7M8"/>
+                        <outlet property="mapView" destination="TJl-yu-nOM" id="9op-75-JAA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="118.29085457271366"/>
         </scene>
-        <!--View Controller-->
+        <!--Pokedex View Controller-->
         <scene sceneID="pRi-lU-Mxl">
             <objects>
-                <viewController id="DNW-PR-1HA" sceneMemberID="viewController">
+                <viewController id="DNW-PR-1HA" customClass="PokedexViewController" customModule="Go_Pokemon_Go" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lw3-Cy-Vbb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +78,10 @@
                                     <constraint firstAttribute="height" constant="50" id="s8v-vN-KYF"/>
                                     <constraint firstAttribute="width" constant="50" id="ugO-SZ-tPv"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="DNW-PR-1HA" eventType="touchUpInside" id="BG8-rm-Cnv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -88,6 +95,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="csv-re-e1N"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="2Bi-G3-0zT" id="D8B-1P-acM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdX-cg-Tas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
