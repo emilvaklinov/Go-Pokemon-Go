@@ -14,6 +14,8 @@
 		488DE97F2464B2FF004E7E8D /* Go_Pokemon_Go.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 488DE97D2464B2FF004E7E8D /* Go_Pokemon_Go.xcdatamodeld */; };
 		488DE9812464B302004E7E8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 488DE9802464B302004E7E8D /* Assets.xcassets */; };
 		488DE9842464B302004E7E8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488DE9822464B302004E7E8D /* LaunchScreen.storyboard */; };
+		488DE98C2464B6A5004E7E8D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488DE98B2464B6A5004E7E8D /* MapViewController.swift */; };
+		488DE98E2464B721004E7E8D /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488DE98D2464B721004E7E8D /* PokedexViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		488DE9802464B302004E7E8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		488DE9832464B302004E7E8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		488DE9852464B302004E7E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		488DE98B2464B6A5004E7E8D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		488DE98D2464B721004E7E8D /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				488DE9762464B2FF004E7E8D /* SceneDelegate.swift */,
 				488DE9782464B2FF004E7E8D /* ViewController.swift */,
 				488DE97A2464B2FF004E7E8D /* Main.storyboard */,
+				488DE98B2464B6A5004E7E8D /* MapViewController.swift */,
+				488DE98D2464B721004E7E8D /* PokedexViewController.swift */,
 				488DE9802464B302004E7E8D /* Assets.xcassets */,
 				488DE9822464B302004E7E8D /* LaunchScreen.storyboard */,
 				488DE9852464B302004E7E8D /* Info.plist */,
@@ -144,6 +150,8 @@
 				488DE9792464B2FF004E7E8D /* ViewController.swift in Sources */,
 				488DE97F2464B2FF004E7E8D /* Go_Pokemon_Go.xcdatamodeld in Sources */,
 				488DE9752464B2FF004E7E8D /* AppDelegate.swift in Sources */,
+				488DE98E2464B721004E7E8D /* PokedexViewController.swift in Sources */,
+				488DE98C2464B6A5004E7E8D /* MapViewController.swift in Sources */,
 				488DE9772464B2FF004E7E8D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
