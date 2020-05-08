@@ -18,21 +18,24 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="TJl-yu-nOM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbC-qE-gs5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbC-qE-gs5">
                                 <rect key="frame" x="315" y="10" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="CaL-5f-HTc"/>
                                     <constraint firstAttribute="height" constant="50" id="FnU-7Y-a5b"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="compass"/>
+                                <connections>
+                                    <action selector="centerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="juI-WI-mIn"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vI7-Sw-iks">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vI7-Sw-iks">
                                 <rect key="frame" x="162.5" y="607" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="EgX-ZG-ltN"/>
                                     <constraint firstAttribute="height" constant="50" id="Hhm-Q2-6DH"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="pokeball"/>
                                 <connections>
                                     <segue destination="DNW-PR-1HA" kind="presentation" id="nHE-uB-9Tp"/>
                                 </connections>
@@ -52,7 +55,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="centerTapped" destination="MbC-qE-gs5" id="Cex-nX-7M8"/>
                         <outlet property="mapView" destination="TJl-yu-nOM" id="9op-75-JAA"/>
                     </connections>
                 </viewController>
@@ -72,13 +74,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWK-YD-FDO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWK-YD-FDO">
                                 <rect key="frame" x="162.5" y="587" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="s8v-vN-KYF"/>
                                     <constraint firstAttribute="width" constant="50" id="ugO-SZ-tPv"/>
                                 </constraints>
-                                <state key="normal" title="Cancel"/>
+                                <state key="normal" image="map"/>
                                 <connections>
                                     <action selector="cancelTapped:" destination="DNW-PR-1HA" eventType="touchUpInside" id="BG8-rm-Cnv"/>
                                 </connections>
@@ -104,4 +106,9 @@
             <point key="canvasLocation" x="826" y="118"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="compass" width="512" height="512"/>
+        <image name="map" width="512" height="512"/>
+        <image name="pokeball" width="512" height="512"/>
+    </resources>
 </document>

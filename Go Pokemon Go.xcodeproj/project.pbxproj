@@ -16,6 +16,7 @@
 		488DE9842464B302004E7E8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488DE9822464B302004E7E8D /* LaunchScreen.storyboard */; };
 		488DE98C2464B6A5004E7E8D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488DE98B2464B6A5004E7E8D /* MapViewController.swift */; };
 		488DE98E2464B721004E7E8D /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488DE98D2464B721004E7E8D /* PokedexViewController.swift */; };
+		488DE9902464BC90004E7E8D /* Pokemon.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 488DE98F2464BC90004E7E8D /* Pokemon.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		488DE9852464B302004E7E8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		488DE98B2464B6A5004E7E8D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		488DE98D2464B721004E7E8D /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		488DE98F2464BC90004E7E8D /* Pokemon.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pokemon.JPG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			children = (
 				488DE9732464B2FF004E7E8D /* Go Pokemon Go */,
 				488DE9722464B2FF004E7E8D /* Products */,
+				488DE98F2464BC90004E7E8D /* Pokemon.JPG */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +140,7 @@
 				488DE9842464B302004E7E8D /* LaunchScreen.storyboard in Resources */,
 				488DE9812464B302004E7E8D /* Assets.xcassets in Resources */,
 				488DE97C2464B2FF004E7E8D /* Main.storyboard in Resources */,
+				488DE9902464BC90004E7E8D /* Pokemon.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
