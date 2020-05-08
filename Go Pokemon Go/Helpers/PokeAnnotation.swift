@@ -9,13 +9,13 @@
 import UIKit
 import MapKit
 
-class PokeAnnotation: NSObject, MKAnnotation {
+class PokeAnnotation: NSObject, MKAnnotation  {
     var coordinate: CLLocationCoordinate2D
     var pokemon : Pokemon
     
     init(coord:CLLocationCoordinate2D, pokemon:Pokemon) {
-        self.pokemon = pokemon
         self.coordinate = coord
+        self.pokemon = pokemon
     }
-
 }
+
