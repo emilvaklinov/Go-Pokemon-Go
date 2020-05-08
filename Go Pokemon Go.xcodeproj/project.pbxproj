@@ -17,6 +17,8 @@
 		488DE98C2464B6A5004E7E8D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488DE98B2464B6A5004E7E8D /* MapViewController.swift */; };
 		488DE98E2464B721004E7E8D /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488DE98D2464B721004E7E8D /* PokedexViewController.swift */; };
 		488DE9902464BC90004E7E8D /* Pokemon.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 488DE98F2464BC90004E7E8D /* Pokemon.JPG */; };
+		488DE99224658AD6004E7E8D /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488DE99124658AD6004E7E8D /* CoreDataHelper.swift */; };
+		488DE9972465BD28004E7E8D /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488DE9962465BD28004E7E8D /* PokeAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		488DE98B2464B6A5004E7E8D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		488DE98D2464B721004E7E8D /* PokedexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 		488DE98F2464BC90004E7E8D /* Pokemon.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pokemon.JPG; sourceTree = "<group>"; };
+		488DE99124658AD6004E7E8D /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		488DE9962465BD28004E7E8D /* PokeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,18 +69,52 @@
 		488DE9732464B2FF004E7E8D /* Go Pokemon Go */ = {
 			isa = PBXGroup;
 			children = (
-				488DE9742464B2FF004E7E8D /* AppDelegate.swift */,
-				488DE9762464B2FF004E7E8D /* SceneDelegate.swift */,
-				488DE9782464B2FF004E7E8D /* ViewController.swift */,
-				488DE97A2464B2FF004E7E8D /* Main.storyboard */,
-				488DE98B2464B6A5004E7E8D /* MapViewController.swift */,
-				488DE98D2464B721004E7E8D /* PokedexViewController.swift */,
+				488DE99524658B2E004E7E8D /* Delegates */,
+				488DE99324658AE6004E7E8D /* Controllers */,
+				488DE99424658AF9004E7E8D /* Views */,
+				488DE9982465BD3A004E7E8D /* Helpers */,
 				488DE9802464B302004E7E8D /* Assets.xcassets */,
-				488DE9822464B302004E7E8D /* LaunchScreen.storyboard */,
 				488DE9852464B302004E7E8D /* Info.plist */,
 				488DE97D2464B2FF004E7E8D /* Go_Pokemon_Go.xcdatamodeld */,
 			);
 			path = "Go Pokemon Go";
+			sourceTree = "<group>";
+		};
+		488DE99324658AE6004E7E8D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				488DE9782464B2FF004E7E8D /* ViewController.swift */,
+				488DE98B2464B6A5004E7E8D /* MapViewController.swift */,
+				488DE98D2464B721004E7E8D /* PokedexViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		488DE99424658AF9004E7E8D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				488DE97A2464B2FF004E7E8D /* Main.storyboard */,
+				488DE9822464B302004E7E8D /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		488DE99524658B2E004E7E8D /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				488DE9742464B2FF004E7E8D /* AppDelegate.swift */,
+				488DE9762464B2FF004E7E8D /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		488DE9982465BD3A004E7E8D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				488DE99124658AD6004E7E8D /* CoreDataHelper.swift */,
+				488DE9962465BD28004E7E8D /* PokeAnnotation.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +190,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				488DE9792464B2FF004E7E8D /* ViewController.swift in Sources */,
+				488DE9972465BD28004E7E8D /* PokeAnnotation.swift in Sources */,
 				488DE97F2464B2FF004E7E8D /* Go_Pokemon_Go.xcdatamodeld in Sources */,
 				488DE9752464B2FF004E7E8D /* AppDelegate.swift in Sources */,
+				488DE99224658AD6004E7E8D /* CoreDataHelper.swift in Sources */,
 				488DE98E2464B721004E7E8D /* PokedexViewController.swift in Sources */,
 				488DE98C2464B6A5004E7E8D /* MapViewController.swift in Sources */,
 				488DE9772464B2FF004E7E8D /* SceneDelegate.swift in Sources */,

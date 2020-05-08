@@ -13,6 +13,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 
     var manager = CLLocationManager()
     var updateCount = 0
+    var pokemons : [Pokemon] = []
     
     @IBOutlet weak var mapView: MKMapView!
   
@@ -20,6 +21,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Getting the pokemons
+        pokemons = getAllPokemon()
+        
         manager.delegate = self
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             setup()
@@ -39,6 +44,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView.showsUserLocation = true
         manager.stopUpdatingLocation()
         mapView.delegate = self
+        
+        // Creating pokemons every 5 secunds
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (timer) in
+            if let center = self.manager.location?.coordinate {
+                var annoCoord = center
+                annoCoord.latitude += (Double.random(in: 0...200) - 100.0) / 5000.0
+                annoCoord.longitude += (Double.random(in: 0...200) - 100.0) / 5000.0
+                if let pokemon = self.pokemons.randomElement() {
+                    
+                }
+            }
+        }
     }
     // Custom annotation
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
