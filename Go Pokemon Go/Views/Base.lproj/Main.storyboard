@@ -37,7 +37,7 @@
                                 </constraints>
                                 <state key="normal" image="pokeball"/>
                                 <connections>
-                                    <segue destination="DNW-PR-1HA" kind="presentation" id="nHE-uB-9Tp"/>
+                                    <segue destination="DNW-PR-1HA" kind="presentation" identifier="moveToPokedex" id="nHE-uB-9Tp"/>
                                 </connections>
                             </button>
                         </subviews>

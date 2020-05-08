@@ -10,13 +10,13 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-
+    
     var manager = CLLocationManager()
     var updateCount = 0
     var pokemons : [Pokemon] = []
     
     @IBOutlet weak var mapView: MKMapView!
-  
+    
     
     
     override func viewDidLoad() {
@@ -49,8 +49,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (timer) in
             if let center = self.manager.location?.coordinate {
                 var annoCoord = center
-                annoCoord.latitude += (Double.random(in: 0...200) - 100.0) / 5000.0
-                annoCoord.longitude += (Double.random(in: 0...200) - 100.0) / 5000.0
+                annoCoord.latitude += (Double.random(in: 0...200) - 100.0) / 30000.0
+                annoCoord.longitude += (Double.random(in: 0...200) - 100.0) / 30000.0
                 if let pokemon = self.pokemons.randomElement() {
                     let anno = PokeAnnotation(coord: annoCoord, pokemon: pokemon)
                     self.mapView.addAnnotation(anno)
@@ -78,9 +78,50 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return annoView
     }
     
-// To follow the location of the user when is moving
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        mapView.deselectAnnotation(view.annotation, animated: true)
+        
+        if view.annotation is MKUserLocation {
+            
+        } else {
+            if let center =  manager.location?.coordinate {
+                if let pokeCenter = view.annotation?.coordinate {
+                    let region = MKCoordinateRegion(center: pokeCenter, latitudinalMeters: 200, longitudinalMeters: 200)
+                    mapView.setRegion(region, animated: false)
+                    
+                    if let pokeAnnotation = view.annotation as? PokeAnnotation {
+                        
+                        if let pokemonName = pokeAnnotation.pokemon.name {
+                            if mapView.visibleMapRect.contains(MKMapPoint(center)) {
+                                //                            print("YOU COUGHT !")
+                                pokeAnnotation.pokemon.caught = true
+                                (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+                                let alertVC = UIAlertController(title: "Congrats!", message: "You caught a \(pokemonName)", preferredStyle: .alert)
+                                let pokeDexAlert = UIAlertAction(title: "PokeDex", style: .default) { (action) in
+                                    self.performSegue(withIdentifier: "moveToPokedex", sender: nil)
+                                }
+                                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                                alertVC.addAction(pokeDexAlert)
+                                alertVC.addAction(okAction)
+                                present(alertVC, animated: true, completion: nil)
+                                
+                            } else {
+                                //                                print("TOO FAR :(")
+                                let alertVC = UIAlertController(title: "Ooops!", message: "You were to far away from this \(pokemonName) to catch it. Try moving closer! ", preferredStyle: .alert)
+                                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                                alertVC.addAction(okAction)
+                                present(alertVC, animated: true, completion: nil)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // To follow the location of the user when is moving
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-       
+        
         if updateCount < 3 {
             if let center = manager.location?.coordinate {
                 let region = MKCoordinateRegion(center: center, latitudinalMeters: 200, longitudinalMeters: 200)
@@ -90,7 +131,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         } else {
             manager.stopUpdatingLocation()
         }
-
+        
     }
     
     @IBAction func centerTapped(_ sender: Any) {

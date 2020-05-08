@@ -11,6 +11,9 @@ import UIKit
 class PokedexViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    var caughtPokemon : [Pokemon] = []
+    var uncaughtPokemon : [Pokemon] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
